@@ -9,7 +9,7 @@
 
     <style>
 
-      html {
+      body {
         background: #eeeeee;
         color: #111111;
         font: 14px/20px "PT Sans", "Fira Sans", "Ubuntu", Corbel, Tahoma, sans-serif;
@@ -29,12 +29,18 @@
         display: grid;
         grid-gap: 1em;
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        grid-template-rows: repeat(200px);
+        grid-auto-rows: minmax(150px, auto);
+        grid-auto-flow: dense;
       }
 
       figure {
         margin: 0;
+        grid-column: span 1;
         grid-row: span 2;
+      }
+
+      figure.long {
+        grid-column: span 2;
       }
 
       figure.tall {
@@ -68,7 +74,6 @@
     </header>
 
     <main>
-
       <figure id="dust-storm-near-mills-new-mexico">
         <a href="#dust-storm-near-mills-new-mexico">
           <img alt="Dust storm sweeping over farmland" src="../images/lange/dust-storm-near-mills-new-mexico.jpg">
@@ -79,6 +84,16 @@
         </figcaption>
       </figure>
 
+      <figure id="plains-west-of-fresno" class="tall">
+        <a href="#plains-west-of-fresno">
+          <img alt="Abandoned ranch house" src="../images/lange/plains-west-of-fresno.jpg">
+        </a>
+        <figcaption>
+          <p>On the plains west of Fresno, California. Family of seven from Oregon dairy ranch which they lost. “We tried to get too big, I guess. Milk cans are all that’s left of the dairy. Now pick bolls to make fifty cents to one dollar a day. We can’t work every day or maybe we could get by.” Rent for house without water or sanitation — six dollars per month. Plan next to pick fruit. “They say if you come to California, you always come back, but I’m willing to leave it.”</p>
+          <p>LCCN <a href="https://lccn.loc.gov/2017771253">2017771253</a></p>
+        </figcaption>
+      </figure>
+
       <figure id="power-farming-displaces-tenants">
         <a href="#power-farming-displaces-tenants">
           <img alt="Barn surrounded by plowed-out field" src="../images/lange/power-farming-displaces-tenants.jpg">
@@ -86,6 +101,16 @@
         <figcaption>
           <p>Power farming displaces tenants from the land in the western dry cotton area. Childress County, Texas Panhandle</p>
           <p>LCCN <a href="https://lccn.loc.gov/2017770664">2017770664</a></p>
+        </figcaption>
+      </figure>
+
+      <figure id="misuse" class="long">
+        <a href="#misuse">
+          <img alt="Fence corner and outbuilding being buried by dust" src="../images/lange/misuse.jpg">
+        </a>
+        <figcaption>
+          <p>Fence corner and outbuilding being buried by dust. Misuse of lands is the chief cause of results such as this. Mills, New Mexico</p>
+          <p>LCCN <a href="https://lccn.loc.gov/2017759919">2017759919</a></p>
         </figcaption>
       </figure>
 
@@ -106,16 +131,6 @@
         <figcaption>
           <p>These farm implements should never have been used for they destroyed a naturally rich grazing area. Mills, New Mexico</p>
           <p>LCCN <a href="https://lccn.loc.gov/2017759938">2017759938</a></p>
-        </figcaption>
-      </figure>
-
-      <figure id="plains-west-of-fresno" class="tall">
-        <a href="#plains-west-of-fresno">
-          <img alt="Abandoned ranch house" src="../images/lange/plains-west-of-fresno.jpg">
-        </a>
-        <figcaption>
-          <p>On the plains west of Fresno, California. Family of seven from Oregon dairy ranch which they lost. “We tried to get too big, I guess. Milk cans are all that’s left of the dairy. Now pick bolls to make fifty cents to one dollar a day. We can’t work every day or maybe we could get by.” Rent for house without water or sanitation — six dollars per month. Plan next to pick fruit. “They say if you come to California, you always come back, but I’m willing to leave it.”</p>
-          <p>LCCN <a href="https://lccn.loc.gov/2017771253">2017771253</a></p>
         </figcaption>
       </figure>
 
@@ -179,6 +194,16 @@
         </figcaption>
       </figure>
 
+      <figure id="corral-buried-by-dust" class="tall">
+        <a href="#corral-buried-by-dust">
+          <img alt="A corral practically buried by drifted dust." src="../images/lange/corral-buried-by-dust.jpg">
+        </a>
+        <figcaption>
+          <p>A corral practically buried by drifted dust. Mills, New Mexico. Therefore, the fertile top soil of a grazing area cannot be utilized</p>
+          <p>LCCN <a href="https://lccn.loc.gov/2017759937">2017759937</a></p>
+        </figcaption>
+      </figure>
+
       <figure id="farm-machinery">
         <a href="#farm-machinery">
           <img alt="Abandoned farm machinery on scrubby hill; farm house in background" src="../images/lange/farm-machinery.jpg">
@@ -206,6 +231,56 @@
         <figcaption>
           <p>Mailbox in Dust Bowl. Coldwater District, north of Dalhart, Texas</p>
           <p>LCCN <a href="https://lccn.loc.gov/2017770562">2017770562</a></p>
+        </figcaption>
+      </figure>
+
+      <figure id="abandoned-church">
+        <a href="#abandoned-church">
+          <img alt="Small abandoned church; few conifers, mountains in background" src="../images/lange/abandoned-church.jpg">
+        </a>
+        <figcaption>
+          <p>Abandoned church in cut-over area. Boundary County, Idaho</p>
+          <p>LCCN <a href="https://lccn.loc.gov/2017774199">2017774199</a></p>
+        </figcaption>
+      </figure>
+
+      <figure id="land-cut-over">
+        <a href="#land-cut-over">
+          <img alt="Small abandoned church; few conifers, mountains in background" src="../images/lange/land-cut-over.jpg">
+        </a>
+        <figcaption>
+          <p>Land cut over by lumber company and not replanted. Greene County, Georgia.</p>
+          <p>LCCN <a href="https://lccn.loc.gov/2017770465">2017770465</a></p>
+        </figcaption>
+      </figure>
+
+      <figure id="alcohol-plant">
+        <a href="#alcohol-plant">
+          <img alt="Square-patterned frame of abandoned alcohol refinery, surrounded by knee-high forbs" src="../images/lange/alcohol-plant.jpg">
+        </a>
+        <figcaption>
+          <p>What is left of the alcohol plant, built to utilize refuse. Fullerton, Louisiana, an abandoned lumber town</p>
+          <p>LCCN <a href="https://lccn.loc.gov/2017770467">2017770467</a></p>
+        </figcaption>
+      </figure>
+
+      <figure id="remains-of-sawmill">
+        <a href="#remains-of-sawmill">
+          <img alt="Abandoned sawmill missing its roof" src="../images/lange/remains-of-sawmill.jpg">
+        </a>
+        <figcaption>
+          <p>Remains of sawmill in Fullerton, Louisiana. An abandoned lumber town</p>
+          <p>LCCN <a href="https://lccn.loc.gov/2017770315">2017770315</a></p>
+        </figcaption>
+      </figure>
+
+      <figure id="careyville">
+        <a href="#careyville">
+          <img alt="Careyville, Florida, a ghost town" src="../images/lange/careyville.jpg">
+        </a>
+        <figcaption>
+          <p>Careyville, Florida. A sawmill village, abandoned after the closing of the mill</p>
+          <p>LCCN <a href="https://lccn.loc.gov/2017770367">2017770367</a></p>
         </figcaption>
       </figure>
 
