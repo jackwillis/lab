@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="index" title="HTML Laboratory" href="../">
+
+    <title>Interactive gallery with CSS Grid » HTML Laboratory » attac.us</title>
+
+    <style>
+
+      html {
+        background: #eeeeee;
+        color: #111111;
+        font: 14px/20px "PT Sans", "Fira Sans", "Ubuntu", Corbel, Tahoma, sans-serif;
+      }
+
+      p {
+        margin: 0.5em 0;
+        hyphens: auto;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      main {
+        margin: 2em 0;
+        display: grid;
+        grid-gap: 1em;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-rows: repeat(200px);
+      }
+
+      figure {
+        margin: 0;
+        grid-row: span 2;
+      }
+
+      figure.tall {
+        grid-row: span 3;
+      }
+
+      figure:target {
+        grid-column: 1 / -1;
+        grid-row: 1;
+
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        align-items: start;
+        grid-gap: 1em;
+
+        height: 400px;
+        margin: 1em auto;
+      }
+
+      figure:target img {
+        max-height: 400px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <h1><a href="#">Interactive gallery with CSS Grid</a></h1>
+      <p>“The record of the Great Plains is to a great extent a record of settlement and abandonment.” — J. Russell Smith</p>
+    </header>
+
+    <main>
+
+      <figure id="dust-storm-near-mills-new-mexico">
+        <a href="#dust-storm-near-mills-new-mexico">
+          <img alt="Dust storm sweeping over farmland" src="../images/lange/dust-storm-near-mills-new-mexico.jpg">
+        </a>
+        <figcaption>
+          <p>Dust storm near Mills, New Mexico</p>
+          <p>LCCN <a href="https://lccn.loc.gov/2017760257">2017760257</a></p>
+        </figcaption>
+      </figure>
+
+      <figure id="power-farming-displaces-tenants">
+        <a href="#power-farming-displaces-tenants">
+          <img alt="Barn surrounded by plowed-out field" src="../images/lange/power-farming-displaces-tenants.jpg">
+        </a>
+        <figcaption>
+          <p>Power farming displaces tenants from the land in the western dry cotton area. Childress County, Texas Panhandle</p>
+          <p>LCCN <a href="https://lccn.loc.gov/2017770664">2017770664</a></p>
+        </figcaption>
+      </figure>
+
+      <figure id="dust-bowl-farm">
+        <a href="#dust-bowl-farm">
+          <img alt="Modest farm house surrounded by dust, nearby power lines" src="../images/lange/dust-bowl-farm.jpg">
+        </a>
+        <figcaption>
+          <p>Dust Bowl farm. Coldwater District, north of Dalhart, Texas. This house is occupied; most of the houses in this district have been abandoned</p>
+          <p>LCCN <a href="https://lccn.loc.gov/2017770620">2017770620</a></p>
+        </figcaption>
+      </figure>
+
+      <figure id="farm-implements">
+        <a href="#farm-implements">
+          <img alt="Disused farm implements resting on dust near a shack" src="../images/lange/farm-implements.jpg">
+        </a>
+        <figcaption>
+          <p>These farm implements should never have been used for they destroyed a naturally rich grazing area. Mills, New Mexico</p>
+          <p>LCCN <a href="https://lccn.loc.gov/2017759938">2017759938</a></p>
+        </figcaption>
+      </figure>
+
+      <figure id="plains-west-of-fresno" class="tall">
+        <a href="#plains-west-of-fresno">
+          <img alt="Abandoned ranch house" src="../images/lange/plains-west-of-fresno.jpg">
+        </a>
+        <figcaption>
+          <p>On the plains west of Fresno, California. Family of seven from Oregon dairy ranch which they lost. “We tried to get too big, I guess. Milk cans are all that’s left of the dairy. Now pick bolls to make fifty cents to one dollar a day. We can’t work every day or maybe we could get by.” Rent for house without water or sanitation — six dollars per month. Plan next to pick fruit. “They say if you come to California, you always come back, but I’m willing to leave it.”</p>
+          <p>LCCN <a href="https://lccn.loc.gov/2017771253">2017771253</a></p>
+        </figcaption>
+      </figure>
+
+      <figure id="drought-abandoned-house-hollis">
+        <a href="#drought-abandoned-house-hollis">
+          <img alt="Abandoned small house against dirt road" src="../images/lange/drought-abandoned-house-hollis.jpg">
+        </a>
+        <figcaption>
+          <p>Drought-abandoned house on the edge of the Great Plains near Hollis, Oklahoma</p>
+          <p>LCCN <a href="https://lccn.loc.gov/2017770649">2017770649</a></p>
+        </figcaption>
+      </figure>
+
+      <figure id="abandoned-farm-coldwater">
+        <a href="#abandoned-farm-coldwater">
+          <img alt="Wall of dust pushes up against a dilapidated farm house" src="../images/lange/abandoned-farm-coldwater.jpg">
+        </a>
+        <figcaption>
+          <p>Abandoned farm. Coldwater District, north of Dalhart, Texas</p>
+          <p>LCCN <a href="https://lccn.loc.gov/2017770556">2017770556</a></p>
+        </figcaption>
+      </figure>
+
+      <figure id="abandoned-farm-texas-county">
+        <a href="#abandoned-farm-texas-county">
+          <img alt="Abandoned farm house on the other side of an empty field" src="../images/lange/abandoned-farm-texas-county.jpg">
+        </a>
+        <figcaption>
+          <p>Abandoned farm on the high plains, Texas County, Oklahoma.</p>
+          <p>LCCN <a href="https://lccn.loc.gov/2017770560">2017770560</a></p>
+        </figcaption>
+      </figure>
+
+      <figure id="abandoned-tenant-cabin-mississippi">
+        <a href="#abandoned-tenant-cabin-mississippi">
+          <img alt="Tenant farmer's cabin with caved-in roof" src="../images/lange/abandoned-tenant-cabin-mississippi.jpg">
+        </a>
+        <figcaption>
+          <p>Abandoned tenant cabin of the Mississippi Delta</p>
+          <p>LCCN <a href="https://lccn.loc.gov/2017770324">2017770324</a></p>
+        </figcaption>
+      </figure>
+
+      <figure id="carter-county">
+        <a href="#carter-county">
+          <img alt="Gate and broken fence before exhausted farmland" src="../images/lange/carter-county.jpg">
+        </a>
+        <figcaption>
+          <p>Carter County, Oklahoma. Abandoned land, exhausted soil</p>
+          <p>LCCN <a href="https://lccn.loc.gov/2017770105">2017770105</a></p>
+        </figcaption>
+      </figure>
+
+      <figure id="dust-storm">
+        <a href="#dust-storm">
+          <img alt="Dust storm; man in foreground; buildings in background" src="../images/lange/dust-storm.jpg">
+        </a>
+        <figcaption>
+          <p>Dust storm. It was conditions of this sort which forced many farmers to abandon the area. Spring 1935. New Mexico</p>
+          <p>LCCN <a href="https://lccn.loc.gov/2017759935">2017759935</a></p>
+        </figcaption>
+      </figure>
+
+      <figure id="farm-machinery">
+        <a href="#farm-machinery">
+          <img alt="Abandoned farm machinery on scrubby hill; farm house in background" src="../images/lange/farm-machinery.jpg">
+        </a>
+        <figcaption>
+          <p>Farm machinery left on abandoned dry land farm in Columbia Basin. Washington, Grant County, one mile east of Quincy.</p>
+          <p>LCCN <a href="https://lccn.loc.gov/2017773227">2017773227</a></p>
+        </figcaption>
+      </figure>
+
+      <figure id="abandoned-house-widtsoe">
+        <a href="#abandoned-house-widtsoe">
+          <img alt="Abandoned house with rear wall collapsed" src="../images/lange/abandoned-house-widtsoe.jpg">
+        </a>
+        <figcaption>
+          <p>One of many abandoned homes in the Widtsoe area. Utah.</p>
+          <p>LCCN <a href="https://lccn.loc.gov/2017759431">2017759431</a></p>
+        </figcaption>
+      </figure>
+
+      <figure id="mailbox-in-dust-bowl">
+        <a href="#mailbox-in-dust-bowl">
+          <img alt="Mailbox in foreground; Dirt road intersection in midground; fence in background" src="../images/lange/mailbox-in-dust-bowl.jpg">
+        </a>
+        <figcaption>
+          <p>Mailbox in Dust Bowl. Coldwater District, north of Dalhart, Texas</p>
+          <p>LCCN <a href="https://lccn.loc.gov/2017770562">2017770562</a></p>
+        </figcaption>
+      </figure>
+
+    </main>
+
+    <footer>
+      <a rel="index" title="HTML Laboratory" href="../">Back</a>
+    </footer>
+
+  </body>
+</html>
