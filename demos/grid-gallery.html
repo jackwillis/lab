@@ -13,6 +13,7 @@
         background: #eeeeee;
         color: #111111;
         font: 14px/20px "PT Sans", "Fira Sans", "Ubuntu", Corbel, Tahoma, sans-serif;
+        padding: 1em;
       }
 
       p {
@@ -52,9 +53,9 @@
         main {
           margin: 2em 0;
           display: grid;
-          grid-gap: 1em;
+          grid-gap: 2em;
           grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-          grid-auto-rows: minmax(50px, auto);
+          grid-auto-rows: minmax(100px, auto);
           grid-auto-flow: dense;
         }
 
@@ -64,23 +65,11 @@
 
           margin: 0;
           grid-column: span 1;
-          grid-row: span 4;
-        }
-
-        figure.long {
-          grid-column: span 2;
-        }
-
-        figure.extra-short {
           grid-row: span 2;
         }
 
-        figure.short {
-          grid-row: span 3;
-        }
-
         figure.tall {
-          grid-row: span 5;
+          grid-row: span 3;
         }
 
         figure:target {
@@ -116,7 +105,7 @@
     </aside>
 
     <main>
-      <figure id="dust-storm-near-mills-new-mexico" class="extra-short">
+      <figure id="dust-storm-near-mills-new-mexico">
         <a href="#dust-storm-near-mills-new-mexico">
           <img alt="Dust storm sweeping over farmland" src="../images/lange/dust-storm-near-mills-new-mexico.jpg">
         </a>
@@ -126,7 +115,7 @@
         </figcaption>
       </figure>
 
-      <figure id="plains-west-of-fresno">
+      <figure id="plains-west-of-fresno" class="tall">
         <a href="#plains-west-of-fresno">
           <img alt="Abandoned ranch house" src="../images/lange/plains-west-of-fresno.jpg">
         </a>
@@ -136,27 +125,7 @@
         </figcaption>
       </figure>
 
-      <figure id="power-farming-displaces-tenants" class="short">
-        <a href="#power-farming-displaces-tenants">
-          <img alt="Barn surrounded by plowed-out field" src="../images/lange/power-farming-displaces-tenants.jpg">
-        </a>
-        <figcaption>
-          <p>Power farming displaces tenants from the land in the western dry cotton area. Childress County, Texas Panhandle</p>
-          <p>LCCN <a href="https://lccn.loc.gov/2017770664">2017770664</a></p>
-        </figcaption>
-      </figure>
-
-      <figure id="misuse" class="long short">
-        <a href="#misuse">
-          <img alt="Fence corner and outbuilding being buried by dust" src="../images/lange/misuse.jpg">
-        </a>
-        <figcaption>
-          <p>Fence corner and outbuilding being buried by dust. Misuse of lands is the chief cause of results such as this. Mills, New Mexico</p>
-          <p>LCCN <a href="https://lccn.loc.gov/2017759919">2017759919</a></p>
-        </figcaption>
-      </figure>
-
-      <figure id="dust-bowl-farm" class="short">
+      <figure id="dust-bowl-farm">
         <a href="#dust-bowl-farm">
           <img alt="Modest farm house surrounded by dust, nearby power lines" src="../images/lange/dust-bowl-farm.jpg">
         </a>
@@ -166,17 +135,7 @@
         </figcaption>
       </figure>
 
-      <figure id="farm-implements" class="short">
-        <a href="#farm-implements">
-          <img alt="Disused farm implements resting on dust near a shack" src="../images/lange/farm-implements.jpg">
-        </a>
-        <figcaption>
-          <p>These farm implements should never have been used for they destroyed a naturally rich grazing area. Mills, New Mexico</p>
-          <p>LCCN <a href="https://lccn.loc.gov/2017759938">2017759938</a></p>
-        </figcaption>
-      </figure>
-
-      <figure id="drought-abandoned-house-hollis" class="extra-short">
+      <figure id="drought-abandoned-house-hollis">
         <a href="#drought-abandoned-house-hollis">
           <img alt="Abandoned small house against dirt road" src="../images/lange/drought-abandoned-house-hollis.jpg">
         </a>
@@ -186,7 +145,7 @@
         </figcaption>
       </figure>
 
-      <figure id="abandoned-farm-coldwater" class="short">
+      <figure id="abandoned-farm-coldwater">
         <a href="#abandoned-farm-coldwater">
           <img alt="Wall of dust pushes up against a dilapidated farm house" src="../images/lange/abandoned-farm-coldwater.jpg">
         </a>
@@ -196,17 +155,7 @@
         </figcaption>
       </figure>
 
-      <figure id="abandoned-farm-texas-county" class="short">
-        <a href="#abandoned-farm-texas-county">
-          <img alt="Abandoned farm house on the other side of an empty field" src="../images/lange/abandoned-farm-texas-county.jpg">
-        </a>
-        <figcaption>
-          <p>Abandoned farm on the high plains, Texas County, Oklahoma.</p>
-          <p>LCCN <a href="https://lccn.loc.gov/2017770560">2017770560</a></p>
-        </figcaption>
-      </figure>
-
-      <figure id="abandoned-tenant-cabin-mississippi" class="extra-short">
+      <figure id="abandoned-tenant-cabin-mississippi">
         <a href="#abandoned-tenant-cabin-mississippi">
           <img alt="Tenant farmer's cabin with caved-in roof" src="../images/lange/abandoned-tenant-cabin-mississippi.jpg">
         </a>
@@ -216,7 +165,17 @@
         </figcaption>
       </figure>
 
-      <figure id="carter-county" class="extra-short">
+      <figure id="misuse">
+        <a href="#misuse">
+          <img alt="Fence corner and outbuilding being buried by dust" src="../images/lange/misuse.jpg">
+        </a>
+        <figcaption>
+          <p>Fence corner and outbuilding being buried by dust. Misuse of lands is the chief cause of results such as this. Mills, New Mexico</p>
+          <p>LCCN <a href="https://lccn.loc.gov/2017759919">2017759919</a></p>
+        </figcaption>
+      </figure>
+
+      <figure id="carter-county">
         <a href="#carter-county">
           <img alt="Gate and broken fence before exhausted farmland" src="../images/lange/carter-county.jpg">
         </a>
@@ -226,7 +185,7 @@
         </figcaption>
       </figure>
 
-      <figure id="dust-storm" class="short">
+      <figure id="dust-storm">
         <a href="#dust-storm">
           <img alt="Dust storm; man in foreground; buildings in background" src="../images/lange/dust-storm.jpg">
         </a>
@@ -256,13 +215,33 @@
         </figcaption>
       </figure>
 
-      <figure id="abandoned-house-widtsoe" class="short">
+      <figure id="abandoned-farm-texas-county">
+        <a href="#abandoned-farm-texas-county">
+          <img alt="Abandoned farm house on the other side of an empty field" src="../images/lange/abandoned-farm-texas-county.jpg">
+        </a>
+        <figcaption>
+          <p>Abandoned farm on the high plains, Texas County, Oklahoma.</p>
+          <p>LCCN <a href="https://lccn.loc.gov/2017770560">2017770560</a></p>
+        </figcaption>
+      </figure>
+
+      <figure id="abandoned-house-widtsoe">
         <a href="#abandoned-house-widtsoe">
           <img alt="Abandoned house with rear wall collapsed" src="../images/lange/abandoned-house-widtsoe.jpg">
         </a>
         <figcaption>
           <p>One of many abandoned homes in the Widtsoe area. Utah.</p>
           <p>LCCN <a href="https://lccn.loc.gov/2017759431">2017759431</a></p>
+        </figcaption>
+      </figure>
+
+      <figure id="farm-implements">
+        <a href="#farm-implements">
+          <img alt="Disused farm implements resting on dust near a shack" src="../images/lange/farm-implements.jpg">
+        </a>
+        <figcaption>
+          <p>These farm implements should never have been used for they destroyed a naturally rich grazing area. Mills, New Mexico</p>
+          <p>LCCN <a href="https://lccn.loc.gov/2017759938">2017759938</a></p>
         </figcaption>
       </figure>
 
@@ -276,7 +255,7 @@
         </figcaption>
       </figure>
 
-      <figure id="abandoned-church" class="short">
+      <figure id="abandoned-church">
         <a href="#abandoned-church">
           <img alt="Small abandoned church; few conifers, mountains in background" src="../images/lange/abandoned-church.jpg">
         </a>
@@ -286,7 +265,7 @@
         </figcaption>
       </figure>
 
-      <figure id="land-cut-over" class="short">
+      <figure id="land-cut-over">
         <a href="#land-cut-over">
           <img alt="Few stumps atop grassy hill" src="../images/lange/land-cut-over.jpg">
         </a>
@@ -296,7 +275,7 @@
         </figcaption>
       </figure>
 
-      <figure id="alcohol-plant" class="short">
+      <figure id="alcohol-plant">
         <a href="#alcohol-plant">
           <img alt="Square-patterned frame of abandoned alcohol refinery, surrounded by knee-high forbs" src="../images/lange/alcohol-plant.jpg">
         </a>
@@ -306,7 +285,7 @@
         </figcaption>
       </figure>
 
-      <figure id="remains-of-sawmill" class="short">
+      <figure id="remains-of-sawmill">
         <a href="#remains-of-sawmill">
           <img alt="Abandoned sawmill missing its roof" src="../images/lange/remains-of-sawmill.jpg">
         </a>
@@ -316,13 +295,23 @@
         </figcaption>
       </figure>
 
-      <figure id="careyville" class="short">
+      <figure id="careyville">
         <a href="#careyville">
           <img alt="Careyville, Florida, a ghost town" src="../images/lange/careyville.jpg">
         </a>
         <figcaption>
           <p>Careyville, Florida. A sawmill village, abandoned after the closing of the mill</p>
           <p>LCCN <a href="https://lccn.loc.gov/2017770367">2017770367</a></p>
+        </figcaption>
+      </figure>
+
+      <figure id="power-farming-displaces-tenants">
+        <a href="#power-farming-displaces-tenants">
+          <img alt="Barn surrounded by plowed-out field" src="../images/lange/power-farming-displaces-tenants.jpg">
+        </a>
+        <figcaption>
+          <p>Power farming displaces tenants from the land in the western dry cotton area. Childress County, Texas Panhandle</p>
+          <p>LCCN <a href="https://lccn.loc.gov/2017770664">2017770664</a></p>
         </figcaption>
       </figure>
 
