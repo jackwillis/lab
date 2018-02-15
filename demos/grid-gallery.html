@@ -54,7 +54,7 @@
           display: grid;
           grid-gap: 1em;
           grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-          grid-auto-rows: minmax(150px, auto);
+          grid-auto-rows: minmax(50px, auto);
           grid-auto-flow: dense;
         }
 
@@ -64,15 +64,23 @@
 
           margin: 0;
           grid-column: span 1;
-          grid-row: span 2;
+          grid-row: span 4;
         }
 
         figure.long {
           grid-column: span 2;
         }
 
-        figure.tall {
+        figure.extra-short {
+          grid-row: span 2;
+        }
+
+        figure.short {
           grid-row: span 3;
+        }
+
+        figure.tall {
+          grid-row: span 5;
         }
 
         figure:target {
@@ -108,7 +116,7 @@
     </aside>
 
     <main>
-      <figure id="dust-storm-near-mills-new-mexico">
+      <figure id="dust-storm-near-mills-new-mexico" class="extra-short">
         <a href="#dust-storm-near-mills-new-mexico">
           <img alt="Dust storm sweeping over farmland" src="../images/lange/dust-storm-near-mills-new-mexico.jpg">
         </a>
@@ -118,7 +126,7 @@
         </figcaption>
       </figure>
 
-      <figure id="plains-west-of-fresno" class="tall">
+      <figure id="plains-west-of-fresno">
         <a href="#plains-west-of-fresno">
           <img alt="Abandoned ranch house" src="../images/lange/plains-west-of-fresno.jpg">
         </a>
@@ -128,7 +136,7 @@
         </figcaption>
       </figure>
 
-      <figure id="power-farming-displaces-tenants">
+      <figure id="power-farming-displaces-tenants" class="short">
         <a href="#power-farming-displaces-tenants">
           <img alt="Barn surrounded by plowed-out field" src="../images/lange/power-farming-displaces-tenants.jpg">
         </a>
@@ -138,7 +146,7 @@
         </figcaption>
       </figure>
 
-      <figure id="misuse" class="long">
+      <figure id="misuse" class="long short">
         <a href="#misuse">
           <img alt="Fence corner and outbuilding being buried by dust" src="../images/lange/misuse.jpg">
         </a>
@@ -148,7 +156,7 @@
         </figcaption>
       </figure>
 
-      <figure id="dust-bowl-farm">
+      <figure id="dust-bowl-farm" class="short">
         <a href="#dust-bowl-farm">
           <img alt="Modest farm house surrounded by dust, nearby power lines" src="../images/lange/dust-bowl-farm.jpg">
         </a>
@@ -158,7 +166,7 @@
         </figcaption>
       </figure>
 
-      <figure id="farm-implements">
+      <figure id="farm-implements" class="short">
         <a href="#farm-implements">
           <img alt="Disused farm implements resting on dust near a shack" src="../images/lange/farm-implements.jpg">
         </a>
@@ -168,7 +176,7 @@
         </figcaption>
       </figure>
 
-      <figure id="drought-abandoned-house-hollis">
+      <figure id="drought-abandoned-house-hollis" class="extra-short">
         <a href="#drought-abandoned-house-hollis">
           <img alt="Abandoned small house against dirt road" src="../images/lange/drought-abandoned-house-hollis.jpg">
         </a>
@@ -178,7 +186,7 @@
         </figcaption>
       </figure>
 
-      <figure id="abandoned-farm-coldwater">
+      <figure id="abandoned-farm-coldwater" class="short">
         <a href="#abandoned-farm-coldwater">
           <img alt="Wall of dust pushes up against a dilapidated farm house" src="../images/lange/abandoned-farm-coldwater.jpg">
         </a>
@@ -188,7 +196,7 @@
         </figcaption>
       </figure>
 
-      <figure id="abandoned-farm-texas-county">
+      <figure id="abandoned-farm-texas-county" class="short">
         <a href="#abandoned-farm-texas-county">
           <img alt="Abandoned farm house on the other side of an empty field" src="../images/lange/abandoned-farm-texas-county.jpg">
         </a>
@@ -198,7 +206,7 @@
         </figcaption>
       </figure>
 
-      <figure id="abandoned-tenant-cabin-mississippi">
+      <figure id="abandoned-tenant-cabin-mississippi" class="extra-short">
         <a href="#abandoned-tenant-cabin-mississippi">
           <img alt="Tenant farmer's cabin with caved-in roof" src="../images/lange/abandoned-tenant-cabin-mississippi.jpg">
         </a>
@@ -208,7 +216,7 @@
         </figcaption>
       </figure>
 
-      <figure id="carter-county">
+      <figure id="carter-county" class="extra-short">
         <a href="#carter-county">
           <img alt="Gate and broken fence before exhausted farmland" src="../images/lange/carter-county.jpg">
         </a>
@@ -218,7 +226,7 @@
         </figcaption>
       </figure>
 
-      <figure id="dust-storm">
+      <figure id="dust-storm" class="short">
         <a href="#dust-storm">
           <img alt="Dust storm; man in foreground; buildings in background" src="../images/lange/dust-storm.jpg">
         </a>
@@ -248,7 +256,7 @@
         </figcaption>
       </figure>
 
-      <figure id="abandoned-house-widtsoe">
+      <figure id="abandoned-house-widtsoe" class="short">
         <a href="#abandoned-house-widtsoe">
           <img alt="Abandoned house with rear wall collapsed" src="../images/lange/abandoned-house-widtsoe.jpg">
         </a>
@@ -268,7 +276,7 @@
         </figcaption>
       </figure>
 
-      <figure id="abandoned-church">
+      <figure id="abandoned-church" class="short">
         <a href="#abandoned-church">
           <img alt="Small abandoned church; few conifers, mountains in background" src="../images/lange/abandoned-church.jpg">
         </a>
@@ -278,9 +286,9 @@
         </figcaption>
       </figure>
 
-      <figure id="land-cut-over">
+      <figure id="land-cut-over" class="short">
         <a href="#land-cut-over">
-          <img alt="Small abandoned church; few conifers, mountains in background" src="../images/lange/land-cut-over.jpg">
+          <img alt="Few stumps atop grassy hill" src="../images/lange/land-cut-over.jpg">
         </a>
         <figcaption>
           <p>Land cut over by lumber company and not replanted. Greene County, Georgia.</p>
@@ -288,7 +296,7 @@
         </figcaption>
       </figure>
 
-      <figure id="alcohol-plant">
+      <figure id="alcohol-plant" class="short">
         <a href="#alcohol-plant">
           <img alt="Square-patterned frame of abandoned alcohol refinery, surrounded by knee-high forbs" src="../images/lange/alcohol-plant.jpg">
         </a>
@@ -298,7 +306,7 @@
         </figcaption>
       </figure>
 
-      <figure id="remains-of-sawmill">
+      <figure id="remains-of-sawmill" class="short">
         <a href="#remains-of-sawmill">
           <img alt="Abandoned sawmill missing its roof" src="../images/lange/remains-of-sawmill.jpg">
         </a>
@@ -308,7 +316,7 @@
         </figcaption>
       </figure>
 
-      <figure id="careyville">
+      <figure id="careyville" class="short">
         <a href="#careyville">
           <img alt="Careyville, Florida, a ghost town" src="../images/lange/careyville.jpg">
         </a>
