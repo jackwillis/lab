@@ -1,95 +1,111 @@
 <!DOCTYPE html>
 <html lang="en-US" xmlns:dct="http://purl.org/dc/terms/" xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
-    <head>
-        <meta charset="UTF-8">
-        <title>HTML Laboratory » attac.us</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-            html {
-                background: #eeeeee;
-                color: #111111;
-                font: 16px/22px "PT Sans", "Droid Sans", Corbel, "Fira Sans", Ubuntu, "Lucida Grande", Tahoma, sans-serif;
-            }
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Laboratory » attac.us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    html {
+      background: #eeeeee;
+      color: #111111;
+      font: 16px/22px Inconsolata, Consolas, "Lucida Console", "Fira Mono", "Droid Sans Mono", "Ubuntu Mono", monospace;
+    }
 
-            body {
-                padding: 1em;
-                max-width: 400px;
-                margin: auto;
-            }
+    body {
+      padding: 1em;
+      max-width: 600px;
+      margin: auto;
+    }
 
-            header,
-            main,
-            footer {
-              margin: 2em 0;
-            }
+    header,
+    main,
+    footer {
+      margin: 2em 0;
+    }
 
-            header img {
-              max-width: 75%;
-              height: auto;
-            }
+    header img {
+      max-width: 75%;
+      height: auto;
+    }
 
-            @media (min-width: 600px) {
-                html {
-                    font-size: 20px;
-                    line-height: 32px;
-                }
+    @media (min-width: 800px) {
+      html {
+        font-size: 20px;
+        line-height: 32px;
+      }
 
-                body {
-                    max-width: 500px;
-                }
+      body {
+        width: 600px;
+      }
 
-                header,
-                main,
-                footer {
-                  margin: 3em 0;
-                }
-            }
+      header,
+      main,
+      footer {
+        margin: 3em 0;
+      }
+    }
 
-            li {
-              margin: 1em 0;
-            }
+    li {
+      margin: 1em 0;
+    }
 
-            footer {
-                font-size: 75%;
-                line-height: 1.2;
-                display: flex;
-                align-items: center;
-            }
+    li:nth-child(2n) {
+      text-align: right;
+      direction: rtl;
+    }
 
-            footer > * {
-                margin: 0 0.5em;
-            }
-        </style>
-    </head>
-    <body>
+    li time,
+    footer {
+      font-size: 75%;
+      line-height: 1.2;
+    }
 
-        <header>
-            <h1>
-                <a href="."><img alt="HTML Laboratory" src="images/html-laboratory.svg" width="378" height="44"></a>
-            </h1>
-        </header>
+    footer {
+      display: flex;
+      align-items: center;
+    }
 
-        <main>
-            <ul>
-                <li><a href="demos/grid-gallery.html">Interactive gallery with CSS Grid</a></li>
-                <li><a href="demos/julia.html">JS1k Julia set visualizers</a></li>
-            </ul>
-        </main>
+    footer > * {
+      margin: 0 0.5em;
+    }
+  </style>
+</head>
+<body>
 
-        <footer>
-            <a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">
-              <img src="images/cc0.png" alt="CC0" width="88" height="33">
-            </a>
+<header>
+  <h1>
+    <a href="."><img alt="HTML Laboratory" src="images/html-laboratory.svg" width="378" height="44"></a>
+  </h1>
+</header>
 
-            <p>
-              To the extent possible under law,
-              <a rel="dct:publisher" href="https://www.attac.us">Jackson Willis</a>
-              has waived all copyright and related or neighboring rights to
-              <span property="dct:title">HTML Laboratory</span>.
-              This work is published from:
-              <span property="vcard:Country" datatype="dct:ISO3166" content="US">United States</span>.
-            </p>
-        </footer>
+<main>
+  <ul>
+    <li><a href="demos/grid-gallery.html">Interactive gallery with CSS Grid</a>
+      <time>2018-04-13</time>
+    </li>
+    <li><a href="demos/julia.html">JS1k Julia set visualizers</a>
+      <time>2018-04-15</time>
+    </li>
+    <li><a href="demos/demolition.html">CSS Grid demolition</a>
+      <time>2018-04-16</time>
+    </li>
+  </ul>
+</main>
 
-    </body>
+<footer>
+  <a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">
+    <img src="images/cc0.png" alt="CC0" width="88" height="33">
+  </a>
+
+  <p>
+    To the extent possible under law,
+    <a rel="dct:publisher" href="https://www.attac.us">Jackson Willis</a>
+    has waived all copyright and related or neighboring rights to
+    <span property="dct:title">HTML Laboratory</span>.
+    This work is published from:
+    <span property="vcard:Country" datatype="dct:ISO3166" content="US">United States</span>.
+  </p>
+</footer>
+
+</body>
 </html>
