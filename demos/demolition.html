@@ -16,14 +16,13 @@
 
       .reflow {
         margin: auto;
+        max-width: 500px;
+        max-height: 500px;
 
-        width: 500px;
-        height: 500px;
         overflow: hidden;
 
         display: grid;
-        grid-template-columns: repeat(5, 100px);
-        grid-template-rows: repeat(5, 100px);
+        grid-template-columns: repeat(5, 1fr);
         grid-auto-flow: dense;
 
         transition: grid-gap 2s;
@@ -31,10 +30,10 @@
 
       .reflow img {
         width: 100%;
-        height: 100%;
+        height: auto;
 
         perspective: 50px;
-        transition: margin-top 2s, transform 2s;
+        transition: margin-top 2s, grid-gap 1s, transform 2s;
       }
 
       .reflow .big {
@@ -46,19 +45,23 @@
         grid-gap: 40px;
       }
 
-      .reflow:hover img:nth-child(4n + 0) { transform: rotateY(0deg) translateZ(100px) rotate(  0deg); }
-      .reflow:hover img:nth-child(4n + 1) { transform:  rotateY(0deg) translateZ(200px) rotate( 45deg); }
-      .reflow:hover img:nth-child(4n + 2) { transform:  rotateY(25deg) translateZ(300px) rotate( -15deg); }
-      .reflow:hover img:nth-child(4n + 3) { transform: rotateY(45deg) translateZ(50px) rotate(35deg); }
+      .reflow:hover img:nth-child(4n + 0) { transform: rotateY(0deg) translateY(100px) rotate(  0deg); }
+      .reflow:hover img:nth-child(4n + 1) { transform:  rotateY(0deg) translateY(200px) rotate( 45deg); }
+      .reflow:hover img:nth-child(4n + 2) { transform:  rotateX(25deg) translateY(300px) rotate( -15deg); }
+      .reflow:hover img:nth-child(4n + 3) { transform: rotateX(45deg) translateZ(50px) rotate(35deg); }
       .reflow:hover img:nth-child(4n + 4) { transform: rotateY(45deg) translateZ(200px) rotate(10deg); }
       .reflow:hover img:nth-child(4n + 5) { transform:  rotateY(-25deg) translateZ(250px) rotate(-25deg); }
-      .reflow:hover img:nth-child(4n + 6) { transform:  rotateY(45deg) translateZ(100px) rotate(10deg); }
-      .reflow:hover img:nth-child(4n + 7) { transform: rotateY(-45deg) translateZ(450px) rotate(-15deg); }
+      .reflow:hover img:nth-child(4n + 6) { transform:  rotateX(45deg) translateZ(100px) rotate(10deg); }
+      .reflow:hover img:nth-child(4n + 7) { transform: rotateX(-45deg) translateY(450px) rotate(-15deg); }
 
       .reflow:hover img {
         position: relative;
-        margin-top: 1000px;
+        margin-top: 700px;
       }
+    }
+
+    nav {
+      margin-top: 4em;
     }
 
   </style>
@@ -66,8 +69,8 @@
 <body>
 
 <header>
-  <h1 lang="eo">Disfaligado!!</h1>
-  <h1>Demolition!!</h1>
+  <h1><a href="">Demolition!!</a></h1>
+  <p>Mouse over or touch the grid.</p>
 </header>
 
 <aside aria-hidden="true" class="fallback-warning">
@@ -76,28 +79,35 @@
 
 <main class="reflow">
 
-  <img alt="abandoned alcohol plant" src="../images/lange/alcohol-plant.jpg" class="big">
   <img alt="Album art: Kala by MIA" src="../images/albums/MIA_Kala.png">
-  <img alt="abandoned church" src="../images/lange/abandoned-church.jpg">
   <img alt="Album art: Matangi by MIA" src="../images/albums/MIA_Matangi.png">
-  <img alt="abandoned house" src="../images/lange/abandoned-house-widtsoe.jpg">
   <img alt="Album art: Arular by MIA" src="../images/albums/MIA_Arular.png" class="big">
-  <img alt="abandoned cabin" src="../images/lange/abandoned-tenant-cabin-mississippi.jpg">
   <img alt="Album art: Empyrean Isles by Herbie Hancock" src="../images/albums/Herbie-Hancock_Empyrean-Isles.png">
-  <img alt="abandoned farm" src="../images/lange/abandoned-farm-coldwater.jpg">
-  <img alt="abandoned house" src="../images/lange/drought-abandoned-house-hollis.jpg">
-  <img alt="abandoned house" src="../images/lange/drought-abandoned-house-hollis.jpg" class="big">
-  <img alt="abandoned house" src="../images/lange/drought-abandoned-house-hollis.jpg">
-  <img alt="abandoned house" src="../images/lange/drought-abandoned-house-hollis.jpg">
-  <img alt="abandoned house" src="../images/lange/drought-abandoned-house-hollis.jpg">
-  <img alt="abandoned house" src="../images/lange/drought-abandoned-house-hollis.jpg">
-  <img alt="abandoned house" src="../images/lange/drought-abandoned-house-hollis.jpg">
+  <img alt="Album art: Kala by MIA" src="../images/albums/MIA_Kala.png">
+
+  <img alt="Album art: Kala by MIA" src="../images/albums/MIA_Kala.png">
+  <img alt="Album art: Matangi by MIA" src="../images/albums/MIA_Matangi.png">
+  <img alt="Album art: Arular by MIA" src="../images/albums/MIA_Arular.png"
+  <img alt="Album art: Empyrean Isles by Herbie Hancock" src="../images/albums/Herbie-Hancock_Empyrean-Isles.png">
+  <img alt="Album art: Kala by MIA" src="../images/albums/MIA_Kala.png">
+
+  <img alt="Album art: Kala by MIA" src="../images/albums/MIA_Kala.png">
+  <img alt="Album art: Matangi by MIA" src="../images/albums/MIA_Matangi.png">
+  <img alt="Album art: Arular by MIA" src="../images/albums/MIA_Arular.png">
+  <img alt="Album art: Empyrean Isles by Herbie Hancock" src="../images/albums/Herbie-Hancock_Empyrean-Isles.png" class="big">
+  <img alt="Album art: Kala by MIA" src="../images/albums/MIA_Kala.png">
+
+  <img alt="Album art: Kala by MIA" src="../images/albums/MIA_Kala.png">
+  <img alt="Album art: Matangi by MIA" src="../images/albums/MIA_Matangi.png">
+  <img alt="Album art: Arular by MIA" src="../images/albums/MIA_Arular.png">
+  <img alt="Album art: Empyrean Isles by Herbie Hancock" src="../images/albums/Herbie-Hancock_Empyrean-Isles.png">
+  <img alt="Album art: Kala by MIA" src="../images/albums/MIA_Kala.png">
 
 </main>
 
-<footer>
+<nav>
   <a rel="index" title="HTML Laboratory" href="..">Index</a>
-</footer>
+</nav>
 
 </body>
 </html>
