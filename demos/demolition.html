@@ -41,20 +41,20 @@
         grid-row: span 2;
       }
 
-      .reflow:active {
+      .reflow:focus {
         grid-gap: 40px;
       }
 
-      .reflow:active img:nth-child(4n + 0) { transform: rotateY(0deg) translateY(100px) rotate(  0deg); }
-      .reflow:active img:nth-child(4n + 1) { transform:  rotateY(0deg) translateY(200px) rotate( 45deg); }
-      .reflow:active img:nth-child(4n + 2) { transform:  rotateX(25deg) translateY(300px) rotate( -15deg); }
-      .reflow:active img:nth-child(4n + 3) { transform: rotateX(45deg) translateZ(50px) rotate(35deg); }
-      .reflow:active img:nth-child(4n + 4) { transform: rotateY(45deg) translateZ(200px) rotate(10deg); }
-      .reflow:active img:nth-child(4n + 5) { transform:  rotateY(-25deg) translateZ(250px) rotate(-25deg); }
-      .reflow:active img:nth-child(4n + 6) { transform:  rotateX(45deg) translateZ(100px) rotate(10deg); }
-      .reflow:active img:nth-child(4n + 7) { transform: rotateX(-45deg) translateY(450px) rotate(-15deg); }
+      .reflow:focus img:nth-child(4n + 0) { transform:                  translateY(100px)                 ; }
+      .reflow:focus img:nth-child(4n + 1) { transform:                  translateY(200px) rotateZ(  45deg); }
+      .reflow:focus img:nth-child(4n + 2) { transform: rotateX(  25deg) translateY(300px) rotateZ(- 15deg); }
+      .reflow:focus img:nth-child(4n + 3) { transform: rotateX(  45deg) translateZ( 50px) rotateZ(  35deg); }
+      .reflow:focus img:nth-child(4n + 4) { transform: rotateY(  45deg) translateZ(200px) rotateZ(  10deg); }
+      .reflow:focus img:nth-child(4n + 5) { transform: rotateY(- 25deg) translateZ(250px) rotateZ(- 25deg); }
+      .reflow:focus img:nth-child(4n + 6) { transform: rotateX(  45deg) translateZ(100px) rotateZ(  10deg); }
+      .reflow:focus img:nth-child(4n + 7) { transform: rotateX(- 45deg) translateY(450px) rotateZ(- 15deg); }
 
-      .reflow:active img {
+      .reflow:focus img {
         position: relative;
         margin-top: 700px;
       }
@@ -70,7 +70,7 @@
 
 <header>
   <h1><a href="">Demolition!!</a></h1>
-  <p>Click or tap the grid.</p>
+  <p>Click, tab to, or tap the grid.</p>
 </header>
 
 <aside aria-hidden="true" class="fallback-warning">
