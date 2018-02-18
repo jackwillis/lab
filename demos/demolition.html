@@ -16,8 +16,8 @@
 
       .reflow {
         margin: auto;
-        max-width: 500px;
-        max-height: 500px;
+        width: 90vw;
+        height: 90vw;
 
         overflow: hidden;
 
@@ -26,6 +26,13 @@
         grid-auto-flow: dense;
 
         transition: grid-gap 2s;
+      }
+
+      @media (min-width: 556px /* = 500px / .90 */) {
+        .reflow {
+          width: 500px;
+          height: 500px;
+        }
       }
 
       .reflow img {
