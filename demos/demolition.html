@@ -31,18 +31,16 @@
       .reflow img {
         width: 100%;
         height: auto;
-
         perspective: 50px;
-        transition: margin-top 1.5s, grid-gap 1.5s, transform 1.5s;
+
+        transition-property: margin-top, transform;
+        transition-timing-function: ease-in;
+        transition-duration: 1s;
       }
 
       .reflow .big {
         grid-column: span 2;
         grid-row: span 2;
-      }
-
-      .reflow:focus {
-        grid-gap: 40px;
       }
 
       .reflow:focus img:nth-child(4n + 0) {
