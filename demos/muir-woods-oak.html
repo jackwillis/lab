@@ -10,41 +10,75 @@
   <link href="https://fonts.googleapis.com/css?family=Rye|Vollkorn:600,600i" rel="stylesheet">
   <style>
     body {
-      font: 600 16px/22px "Vollkorn", serif;
+      font: 600 15px/20px "Vollkorn", serif;
       background: #222;
+
+      margin: 0;
     }
 
     h1, h2 {
       font: 400 40px/60px Rye, cursive;
       text-transform: uppercase;
+      word-spacing: 10px;
     }
 
     h2 {
-      color: #9ea14d;
+      color: #948755;
     }
 
     p {
-      margins: auto;
+      hyphens: auto;
+    }
+
+    nav,
+    .muir-woods {
+      max-width: 980px;
+
+      margin: 1em auto;
+    }
+
+    nav {
+      text-align: center;
+
+      padding: 1em;
+    }
+
+    nav,
+    nav a:link,
+    nav a:visited {
+      color: white;
     }
 
     .muir-woods {
-      background: white;
+      background: #bea260;
 
-      margin: 30px auto;
-      max-width: 940px;
+      box-sizing: border-box;
+      border: 1vw solid #553520;
     }
 
     .muir-woods > * {
-      background: darkslateblue;
+      background: #333c4b;
       color: white;
 
+      margin: 0;
       padding: 1em;
+    }
+
+    .muir-woods figure img {
+      display: block;
+      margin: 1em auto;
+    }
+
+    .muir-woods .muir-quote {
+      margin: 0;
     }
 
     .muir-woods .muir-quote p {
       font-style: italic;
 
       margin: 0.5em 0;
+
+      hyphens: none;
     }
 
     .muir-woods .muir-quote p:nth-child(1) {
@@ -65,8 +99,8 @@
     }
 
     .muir-woods .history {
-      background: #c99260;
-      color: #513e16;
+      background: #bea260;
+      color: #5f4227;
     }
 
     @supports (display: grid) {
@@ -78,83 +112,180 @@
       }
 
       .muir-woods {
+        background: white;
+
         display: grid;
-        grid-gap: 20px;
+        grid-gap: 1vw;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         grid-auto-rows: minmax(300px, auto);
+        grid-auto-flow: dense;
       }
 
       .muir-woods > * {
-        display: flex;
-
-        margin: 0;
         padding: 0;
       }
 
+      .muir-woods figure {
+        display: grid;
+        grid-auto-flow: dense;
+      }
+
+      .muir-woods figure img,
       .muir-woods figure figcaption {
         padding: 0.5em;
       }
 
+      .muir-woods figure img {
+        max-width: 200px;
+
+        margin: 0;
+      }
+
+      /********/
+
       .muir-woods .muir-quote {
+        display: flex;
         flex-direction: column;
         justify-content: center;
       }
 
-      @media (min-width: 630px) {
-        .muir-woods .history {
-          grid-column: span 2;
-          grid-row: span 3;
-        }
+      /********/
+
+      .muir-woods .history {
+        display: grid;
+
+        grid-template-columns: auto auto;
       }
 
       .muir-woods .history h1 {
         order: 2;
 
-        text-align: left;
-
         writing-mode: vertical-rl;
+
         margin: 1rem;
       }
 
       .muir-woods .history p {
         text-align: right;
 
-        padding: 1rem;
+        padding: 0.5em 1em;
+      }
+
+      @media (min-width: 606px /* == 2 * (300px + 1vw)  */) {
+        nav {
+          text-align: left;
+        }
+
+        .muir-woods .history {
+          grid-column: span 2;
+        }
+      }
+
+      @media (min-width: 909px /* == 3 * (300px + 1vw) */) {
+        .muir-woods .history {
+          grid-row: span 3;
+        }
+      }
+
+      /********/
+
+      .muir-woods .felling {
+        grid-template-columns: auto auto;
       }
 
       .muir-woods .felling h2 {
         writing-mode: vertical-rl;
+
         transform: rotate(180deg);
-        align-self: end;
       }
 
+      /********/
+
       .muir-woods .counting {
-        flex-direction: column;
+        grid-template-rows: auto 1fr;
+        grid-template-columns: auto auto;
       }
 
       .muir-woods .counting h2 {
         text-align: right;
+
+        grid-column: span 2;
+      }
+
+      .muir-woods .counting img {
+        max-width: 150px;
+      }
+
+      /********/
+
+      .muir-woods .rolling {
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto;
       }
 
       .muir-woods .rolling h2 {
+        grid-row: span 2;
+
         writing-mode: vertical-rl;
+        text-align: right;
+
         transform: rotate(180deg);
-        align-self: start;
       }
 
+      .muir-woods .rolling img {
+        margin: 1em 1em 0 1em;
+      }
+
+      .muir-woods .rolling figcaption {
+        margin: 0 1em 1em 1em;
+      }
+
+      /********/
+
       .muir-woods .milling {
-        flex-direction: column;
+        grid-template-rows: auto auto 1fr;
+      }
+
+      .muir-woods .milling img {
+        margin: 1em 1em 0 2em;
+      }
+
+      .muir-woods .milling figcaption {
+        margin: 0 1em 1em 2em;
+      }
+
+      /********/
+
+      .muir-woods .finishing {
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto;
       }
 
       .muir-woods .finishing h2 {
-        order: 3;
+        grid-row: span 2;
+        grid-column: -2 / -1;
 
         writing-mode: vertical-lr;
+        text-align: right;
       }
+
+      .muir-woods .finishing img {
+        margin: 1em 1em 0 2em;
+      }
+
+      .muir-woods .finishing figcaption {
+        margin: 0 1em 1em 2em;
+      }
+
     }
   </style>
 </head>
 <body>
+
+<nav>
+  See the <a href="../images/muir-woods-oak/reference.jpg">reference image</a> or
+  read the <a href="https://news.wisc.edu/second-life-for-ancient-oak-trees/">news article</a>.
+</nav>
 
 <article class="muir-woods">
   <blockquote class="muir-quote">
@@ -164,9 +295,55 @@
 
   <section class="history">
     <h1>The Muir Woods Oak Project</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam placerat neque in semper pretium. Fusce imperdiet sapien nibh, sit amet auctor nisl lobortis vel. Aenean pulvinar magna sed mi gravida, vitae condimentum dolor suscipit. Vivamus vestibulum blandit congue.
-    </p>
+
+    <main>
+      <p>
+        In 1859, the hillside now known as Muir Woods was an open oak savannah,
+        with stands of red and white oak trees mixed in with the prairie that descended to the Lake Mendota shore.
+      </p>
+
+      <p>
+        UW–Madison was a mere decade old then, consisting of a handful of buildings on the far side of the hill.
+        Sometime during the spring of that year, an acorn sprouted on the hillside and, as the years went on, grew to become a towering red oak.
+      </p>
+
+      <p>
+        Fast forward 143 years, to fall 2002.
+        In the woods behind the Social Sciences building, the same red oak tree had reached the end of its life,
+        its branches bereft of leaves.
+        Looking at the tree — afflicted by a fungus called oak wilt — and two older oaks dying nearby,
+        Daniel Einstein decided that he would find a way to save the “history in the wood.”
+      </p>
+
+      <p>
+        Einstein, campus environmental management coordinator and arborist, enlisted Bjorn Karlsson,
+        an associate researcher in horticulture who runs Urban Forest Furniture,
+        a small business that salvages dying historic trees for reuse as custom furniture projects.
+      </p>
+
+      <p>
+        It was decided that the Muir Woods oaks would be cut down and transformed into paneling for the Red Gym,
+        itself a 109-year-old, historic campus landmark.
+        The idea seemed to fit the history of trees and the memory of Muir Woods’ namesake John Muir,
+        who, before his days as a famed naturalist, walked among them as a student.
+      </p>
+
+      <p>
+        “It was a perfect arrangement,” Einstein says, noting that many sick trees are simply cut and used for firewood.
+        “We found a higher use for the wood.”
+      </p>
+
+      <p>
+        Last month, after a lengthy process of milling the lumber into boards,
+        drying them and precisely cutting them into paneling, the wainscoting was installed in the On Wisconsin Room of the Red Gym.
+      </p>
+
+      <p>
+        In a new form, the trees are again looking out over Lake Mendota.
+        And thanks to the generosity of the Morgridge Center for Public Service, which funded the project,
+        the ancient red oak has been preserved as a part of the university’s history.
+      </p>
+    </main>
   </section>
 
   <figure class="felling">
@@ -180,33 +357,50 @@
 
   <figure class="counting">
     <h2>Counting</h2>
+    <img alt="" src="../images/muir-woods-oak/counting.jpg">
     <figcaption>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam placerat neque in semper pretium. Fusce imperdiet sapien nibh, sit amet auctor nisl lobortis vel. Aenean pulvinar magna sed mi gravida, vitae condimentum dolor suscipit. Vivamus vestibulum blandit congue.
+      While Peschl (left) packs up equipment,
+      campus arborist Daniel Einstein (right) counts the tree’s rings.
+      This 143-year-old red oak started growing several years before
+      young Wisconsin men left to fight in the Civil War.
     </figcaption>
   </figure>
 
   <figure class="rolling">
     <h2>Rolling</h2>
+    <img alt="Photo of Bjorn Karlsson running logs through a portable sawmill" src="../images/muir-woods-oak/rolling.jpg">
     <figcaption>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam placerat neque in semper pretium. Fusce imperdiet sapien nibh, sit amet auctor nisl lobortis vel. Aenean pulvinar magna sed mi gravida, vitae condimentum dolor suscipit. Vivamus vestibulum blandit congue.
+      Bjorn Karlsson, associate researcher of horticulture,
+      rolls a 12-foot log onto his portable sawmill.
+      He runs Urban Forest Furniture,
+      a small business that salvages dying historic trees for reuse as custom furniture projects.
     </figcaption>
   </figure>
 
   <figure class="milling">
     <h2>Milling</h2>
+    <img alt="Photo of Bjorn Karlsson pulling wood from a sawmill" src="../images/muir-woods-oak/milling.jpg">
     <figcaption>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam placerat neque in semper pretium. Fusce imperdiet sapien nibh, sit amet auctor nisl lobortis vel. Aenean pulvinar magna sed mi gravida, vitae condimentum dolor suscipit. Vivamus vestibulum blandit congue.
+      Karlsson pulls two-inch thick slabs of wood from the sawmill.
+      Later he kiln-dries the wood and cuts the best pieces into lumber.
     </figcaption>
   </figure>
 
   <figure class="finishing">
     <h2>Finishing</h2>
+    <img alt="Photo of man installing wood panels" src="../images/muir-woods-oak/finishing.jpg">
     <figcaption>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam placerat neque in semper pretium. Fusce imperdiet sapien nibh, sit amet auctor nisl lobortis vel. Aenean pulvinar magna sed mi gravida, vitae condimentum dolor suscipit. Vivamus vestibulum blandit congue.
+      The UW–Madison Carpentry Shop finishes the milling processes
+      by cutting grooves into the lumber to create wainscoating.
+      Carpenter Dennis Jacobson installs the panels which line the west wall of this room.
     </figcaption>
   </figure>
 
 </article>
+
+<nav>
+  <a href=".." rel="index">Return to index</a>
+</nav>
 
 </body>
 </html>
