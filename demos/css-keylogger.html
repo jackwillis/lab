@@ -115,27 +115,27 @@
 <main>
 
   <figure class="result">
-    <a href="https://reggolyek.herokuapp.com/spy.svg">
-      <img src="https://reggolyek.herokuapp.com/spy.svg" alt="The keylogger's guess on what you typed" width="300" height="220">
-    </a>
+    <a href="https://reggolyek.herokuapp.com/spy.svg"><img src="https://reggolyek.herokuapp.com/spy.svg" alt="The keylogger's guess on what you typed" width="300" height="220"></a>
   </figure>
 
   <p>
-    This is another demo of a CSS-based keylogger based on <a href="https://news.ycombinator.com/item?id=16427394">this comment</a>.
-    There is no JavaScript on this page — check the source!
-    The page tries to leak user input through the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face"><code>@font-face</code></a> CSS rule,
-    but doesn’t work on all browsers.
+    This is demo of the CSS keylogging technique proposed by <a href="https://news.ycombinator.com/item?id=16427394">this comment</a>.
+    The page tries to leak user input through the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face"><code>@font-face</code></a> CSS rule
+    — check the source code!
+    — but it doesn’t work on all browsers.
   </p>
 
   <section>
     <h2>Try out the demo</h2>
 
     <figure class="thanks">
-      <img alt="Please don’t enter sensitive information on my page thanks" src="../images/sensitive.svg" width="300" height="300">
+      <img alt="Please don’t enter sensitive information on my page thanks"
+           title="Please don’t enter sensitive information on my page thanks"
+           src="../images/sensitive.svg" width="300" height="300">
     </figure>
 
     <form>
-      <label id="author-label" for="author">Who is your favorite author?</label>
+      <label id="author-label" for="author" title="Example: Oscar Wilde">Who is your favorite author?</label>
       <input id="author" aria-labelledby="author-label" type="text">
       <input type="submit" value="Check the keylogger!">
     </form>
