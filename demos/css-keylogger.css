@@ -7,10 +7,6 @@ html {
     background: url(../images/purple-tile.gif) #9B1A46 fixed;
 }
 
-html {
-    background-attachment: fixed;
-}
-
 body {
     background: url(../images/tile.gif) #9ac4c9;
 
