@@ -1,6 +1,6 @@
 body,
 input {
-    font: 700 20px/32px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Ubuntu, Tahoma, "Droid Sans", sans-serif;
+    font: 700 20px/32px 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'Fira Sans', Ubuntu, Tahoma, 'Droid Sans', sans-serif;
 }
 
 html {
@@ -68,7 +68,7 @@ input[type=submit] {
 h1,
 h2,
 code {
-    font-family: "Lucida Console", Monaco, Consolas, "Fira Mono", "DejaVu Sans Mono", monospace;
+    font-family: 'Lucida Console', Monaco, Consolas, 'Fira Mono', 'Ubuntu Mono', 'Droid Sans Mono', 'DejaVu Sans Mono', monospace;
 }
 
 h1 {
