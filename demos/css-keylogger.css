@@ -3,9 +3,8 @@ input {
     font: 700 20px/32px 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'Fira Sans', Ubuntu, Tahoma, 'Droid Sans', sans-serif;
 }
 
-html,
-figure.result img {
-    background: url(../images/purple-tile.gif) #9B1A46;
+html {
+    background: url(../images/purple-tile.gif) #9B1A46 fixed;
 }
 
 html {
@@ -17,13 +16,6 @@ body {
 
     border-width: 3vw 1vw;
     border-color: #f5c71a;
-    border-style: solid;
-}
-
-
-figure.result img {
-    border-width: 1vw 0.5vw;
-    border-color: #CD3423;
     border-style: solid;
 }
 
@@ -110,12 +102,17 @@ a:visited {
 }
 
 h2 {
+    margin-top: 2em;
     padding: 0.25em;
 }
 
 
 figure { text-align: center; margin: 2em auto; width: 80%; }
 figure img { width: 100%; height: auto; }
+
+figure.result {
+    background: #680068;
+}
 
 ul {
     line-height: 2;
