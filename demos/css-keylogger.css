@@ -3,7 +3,8 @@ input {
     font: 700 20px/32px 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'Fira Sans', Ubuntu, Tahoma, 'Droid Sans', sans-serif;
 }
 
-html {
+html,
+figure.result img {
     background: url(../images/purple-tile.gif) fixed #9B1A46;
 }
 
