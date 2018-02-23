@@ -4,7 +4,7 @@ input {
 }
 
 html {
-    background: url(../images/purple-tile.gif) #9B1A46 fixed;
+    background: url(../images/purple-tile.svg) #9B1A46 fixed;
 }
 
 body {
@@ -24,7 +24,7 @@ body {
 }
 
 body {
-    margin: auto;
+    margin: 1vw auto;
     padding: 0 2vw;
 
     max-width: 600px;
